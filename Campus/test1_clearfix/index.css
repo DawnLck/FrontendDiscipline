@@ -1,0 +1,66 @@
+@charset "UTF-8";
+/* index.scss */
+/* CSS 书写顺序
+   1.位置属性(position, top, right, z-index, display, float等)
+
+　　2.大小(width, height, padding, margin)
+
+　　3.文字系列(font, line-height, letter-spacing,color- text-align等)
+
+　　4.背景(background, border等)
+
+　　5.其他(animation, transition等)
+*/
+.head, .content, .aside, .footer {
+  margin: 10px; }
+
+.clearfix:after, .clearfix:before {
+  content: " ";
+  display: block; }
+
+.clearfix:after {
+  clear: both; }
+
+.clearfix {
+  zoom: 1; }
+
+.head {
+  position: relative;
+  display: block;
+  height: 44px;
+  padding: 10px;
+  border: 2px solid darkgreen; }
+
+.logo {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  border: 2px solid indianred; }
+
+.user {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  display: inline-block;
+  height: 20px;
+  width: 80px;
+  border: 2px solid black; }
+
+.content {
+  display: inline-block;
+  width: 70%;
+  height: 200px;
+  border: 2px solid slateblue; }
+
+.aside {
+  display: inline-block;
+  float: right;
+  width: 200px;
+  height: 100px;
+  border: 2px solid indianred; }
+
+.footer {
+  height: 50px;
+  border: 2px solid black; }
+
+/*# sourceMappingURL=index.css.map */

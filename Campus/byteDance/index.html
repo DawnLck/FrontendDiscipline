@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <div class="father center_1">
+        <div class="item square_1"></div>
+    </div>
+    <div class="father center_2">
+        <div class="item square_2"></div>
+    </div>
+    <div class="father center_3">
+        <div class="item square_2"></div>
+    </div>
+</div>
+
+</body>
+<style>
+    .father {
+        position: relative;
+        width: 500px;
+        height: 300px;
+        margin: auto auto 2rem;
+        background: lightskyblue;
+    }
+
+    .item {
+        background: indianred;
+    }
+
+    /* 实现宽度为父元素一半的正方形 */
+    .square_1 {
+        width: 250px;
+        height: 250px;
+    }
+
+    .square_2 {
+        width: 50%;
+        padding-top: 50%;
+        height: 0;
+    }
+
+    /* 实现位置居中 */
+    .center_1 {
+        display: flex;
+        align-items: center; /* 决定交叉轴上的对齐方式（垂直方向）*/
+        justify-content: center; /* 决定主轴上的对齐方式（水平方向）*/
+    }
+
+    .center_2 .item {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    .center_3 .item{
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+</style>
+</html>
