@@ -1,0 +1,30 @@
+{
+  "name": "frontend_discipline",
+  "version": "1.0.0",
+  "description": "前端的自我修炼",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {
+    "docsify-cli": "^4.4.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs": "npx docsify serve ./docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DawnLck/FrontendDiscipline.git"
+  },
+  "keywords": [
+    "FE"
+  ],
+  "author": "Liangck",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DawnLck/FrontendDiscipline/issues"
+  },
+  "homepage": "https://github.com/DawnLck/FrontendDiscipline#readme"
+}
