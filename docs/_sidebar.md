@@ -4,9 +4,9 @@
 
 - 可视化搭建 2020
 
-  - [基础概览](LowCode/VisualConstruction2020_basic)
-  - [解决方案](LowCode/VisualConstruction2020_features)
-  - [业内产品](LowCode/VisualConstruction2020_production)
+  - [背景调研](LowCode/VisualConstruction2020_basic)
+  - [链路、架构和难点](LowCode/VisualConstruction2020_features)
+  - [业内成果陈列](LowCode/VisualConstruction2020_production)
 
 - 解决方案收录
 

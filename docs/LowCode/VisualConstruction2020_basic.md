@@ -16,6 +16,10 @@
 - 业务组件，针对不同项目的业务场景，有一些场景可复用但不足以泛用的颗粒度较大的组件，我们将其封装为业务组件。
 - 模板，颗粒度最大的组件，如活动页、表单页面模板、后台管理页模板、数据可视化模板，这些都是经过大量业务实践，证实可复用的页面主体架构
 
+飞冰给出了一张更详细的关于粒度的参考图，其中的业务组件也可以称为 **widgets**和基础组件（**components**）相区分：
+
+![飞冰 - 粒度参考图](img/VisualConstruction2020_basic.22-25-11.png)
+
 前两者我们可以通过组件库和业务微件库，形成通用的代码片段仓库，而模板我们也可以借由 GUI（图形用户界面，也可称为可视化管理平台），管理我们在业务中遇到的常用模板。
 
 ![不同粒度的代码块](img/visualConstruction2020.23-22-49.png)
@@ -37,6 +41,8 @@
 **可视化搭建** 是一个工具，是一个脚手架，也是一个业务加速器和创意制作平台。
 
 **可视化搭建** 是高效利用组件的前端上层建筑，作为一个庞大的可视化前端应用, 它建立在大量的前端基建（如代码规范、脚手架、组件库、框架等）之上。
+
+![可视化搭建管道图](img/VisualConstruction2020_basic.00-16-50.png)
 
 下图描述了可视化搭建在技术开发层面的具体位置，也可以作为可视化搭建的架构示例。
 
@@ -122,6 +128,7 @@
 4. [《阿里云原生 - 什么是低代码（Low-Code）？》][aliyun-lowcode]
 5. [Wiki - 低代码开发平台][wiki-lowcode]
 6. [《腾讯 - AlloyTeam - 页面可视化搭建工具技术要点》][alloyteam]
+7. [《这，就是飞冰物料》][feibing]
 
 [author]: https://juejin.cn/user/1028798614345032
 [awesome-lowcode]: https://github.com/taowen/awesome-lowcode
@@ -130,3 +137,4 @@
 [aliyun-lowcode]: https://juejin.cn/post/6900791928477417480
 [wiki-lowcode]: https://zh.wikipedia.org/zh-cn/%E4%BD%8E%E7%A8%8B%E5%BC%8F%E7%A2%BC%E9%96%8B%E7%99%BC%E5%B9%B3%E5%8F%B0
 [alloyteam]: http://www.alloyteam.com/2019/07/h5-build-tool-pipeline/
+[feibing]: https://juejin.cn/post/6844903744652443661
