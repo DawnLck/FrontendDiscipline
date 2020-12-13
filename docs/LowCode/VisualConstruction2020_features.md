@@ -1,6 +1,6 @@
 # 【Dawnlck】2020 前端可视化搭建小报告- 02 - 链路、架构和难点
 
-> 该篇主要简述前端可视化搭建的链路、架构和难点，部分小节的内容只有配图，后续有机会可以继续完善。
+> 该篇作为前端可视化报告的第二篇，主要简述前端可视化搭建的链路、架构和难点，内容含有大量图文，部分小节的内容只有配图，后续有机会继续完善。
 
 ## 0. 可视化搭建的使用链路
 
@@ -8,11 +8,11 @@
 
 1. **Low-code**: 如果面向的是研发，场景是中后台或者 toB 的一些业务，我们需要搭建的就是低代码生产链路，用户只需要**改动少量的代码**就能完成一个应用或者页面的**全链路流程**。
 
-   ![LowCode的使用者链路](img/VisualConstruction2020_features.22-23-03.png)
+   ![LowCode的使用者链路](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ebf101c0493f4faa852ffb2efc58038d~tplv-k3u1fbpfcp-watermark.image)
 
 2. **No-code**: 如果面向的是非研发（如产品经理、设计师），场景大多数都是一些简单的营销页面，使用者会希望完全不涉及任何代码，就能把一个页面或者多个页面发布到线上，同时还能保证**可维护**、**可迭代**、**可回退**、**可监控**。
 
-   ![No-Code的使用者链路](img/VisualConstruction2020_features.23-05-32.png)
+   ![No-Code的使用者链路](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7a72479f351748148ad527155de704dd~tplv-k3u1fbpfcp-watermark.image)
 
 了解了**使用者的链路**之后，我们再理解可视化搭建的一些设计思想会顺畅很多。
 
@@ -22,51 +22,55 @@
 
 1. 政采云 - 鲁班架构图
 
-   ![政采云 - 鲁班架构图](img/visualConstruction2020.00-02-24.png)
+   ![政采云 - 鲁班架构图](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8cbd4aa1908b4e30bccf9569935ef5a5~tplv-k3u1fbpfcp-watermark.image)
 
 2. 京东 - MPM
 
-   ![京东 - MPM](img/visualConstruction2020.01-34-23.png)
+   ![京东 - MPM](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/22db4fe9c5284b42be653b8db72e2c2b~tplv-k3u1fbpfcp-watermark.image)
 
 3. 京东 - Atom
 
    > 下图是 Atom 可视化搭建系统的服务端架构
 
-   ![Atom](img/VisualConstruction2020_features.19-57-23.png)
+   ![京东 - Atom](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/96a52f68417e4e93812e1c6e5eaba40b~tplv-k3u1fbpfcp-watermark.image)
 
 4. 阿里淘系技术部 - iceluna
 
-   ![阿里淘系技术部 - iceluna](img/visualConstruction2020.00-27-27.png)
+   - iceluna 架构图 - 整体架构
 
-   ![iceluna - 功能模块设计](img/visualConstruction2020.01-00-48.png)
+   ![阿里 - iceluna](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/aeaf7772632948a29bbad31d48e7a760~tplv-k3u1fbpfcp-watermark.image)
+
+   - iceluna 架构图 - 流程能力图
+
+   ![ice-luna - 流式架构图](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0f2748cdcb254aee9c0102daf1a18e39~tplv-k3u1fbpfcp-watermark.image)
 
 5. 阿里淘系技术部 - imgcook
 
-   ![阿里淘系技术部 - imgcook](img/visualConstruction2020.01-42-49.png)
+   ![阿里 - imgcook](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d99b768ca2b44bb68087ca6c72a9000f~tplv-k3u1fbpfcp-watermark.image)
 
 6. 阿里妈妈 - 淘积木
 
-   ![阿里妈妈 - 淘积木](img/VisualConstruction2020_basic.16-25-20.png)
+   ![阿里妈妈 - 淘积木](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/149f0277b8164cdb90bea6bce67cfd95~tplv-k3u1fbpfcp-watermark.image)
 
 7. 阿里 - 云凤蝶
 
-   ![阿里 - 云凤蝶](img/VisualConstruction2020_features.00-46-11.png)
+   ![阿里 - 云凤蝶](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5e782d506bd74a80af50f9eb2100d8dc~tplv-k3u1fbpfcp-watermark.image)
 
 从这些优秀的项目架构中，笔者也试着归纳了一下，架构图如下：
 
-![可视化搭建架构](img/visualConstruction2020.00-59-31.png)
+![可视化搭建 - 架构归纳](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/40f98c7d2d0346f7879165b3088c1b0b~tplv-k3u1fbpfcp-watermark.image)
 
 ## 2. 可视化编辑器（核心） Low-code Visual Editor
 
-一个成熟的编辑器架构如下图所示：
+iceluna 的编辑器架构如下图所示，一个框架涵盖了三大模块（编排、渲染、内核）：
 
-![iceluna - 编辑器架构层](img/visualConstruction2020.01-06-17.png)
+![iceluna - 编辑器架构层](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9037b58dc24742e78fbc85628135688f~tplv-k3u1fbpfcp-watermark.image)
 
-那么编辑器的核心是什么？需要完成什么？组件化搭建平台其核心骨架由哪几个步骤组成呢？这里主要参考云凤蝶的一篇文章进行讲解。
+可视化搭建的核心是编辑器，而编辑器的核心是组件。
 
-[《云凤蝶可视化搭建的推导与实现 - SEE Conf》][clouddie]
+[云凤蝶][clouddie]将编辑器对组件的操作划分成了五个具体的步骤，如下图所示：
 
-![编辑器的五部曲](img/VisualConstruction2020_features.00-26-07.png)
+![云凤蝶 - 编辑器的五部曲](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3197afb0f00b4800a1bb85723cbd46bd~tplv-k3u1fbpfcp-watermark.image)
 
 ### 2.1 组件的识别和导入
 
@@ -102,7 +106,7 @@
 - 基本属性配置（如大小、颜色、背景、文本等）
 - 横向能力扩充（如 click 事件、悬浮提示、链接跳转等）
 
-![云凤蝶 - 组件的配置和扩展](img/VisualConstruction2020_features.21-51-28.png)
+![云凤蝶 - 组件的配置和扩展](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6b73bb3c0d7a47b9b54029c17b5da77c~tplv-k3u1fbpfcp-watermark.image)
 
 ### 2.4 组件编排和自适应
 
@@ -135,11 +139,11 @@
 
 下图展示了云凤蝶是如何快速导入 npm 组件的：
 
-![云凤蝶 - 快速导入npm组件](img/VisualConstruction2020_features.20-45-05.png)
+![云凤蝶 - 快速导入npm组件](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/947aea9853004a5b90f272825abed8a1~tplv-k3u1fbpfcp-watermark.image)
 
 下图是阿里 iceluna 关于物料和组件流通的架构图。
 
-![iceluna - 物料和组件流通](img/visualConstruction2020.01-08-51.png)
+![iceluna - 物料和组件流通](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/cf04a50c212440efa5716327bf5e5bff~tplv-k3u1fbpfcp-watermark.image)
 
 ## 4. 数据接入、模块通信及状态共享
 
@@ -152,7 +156,7 @@
 1. Database / API 接入数据接口
 2. Service / Map / Email 嵌入数据服务（比如邮件、地图）
 
-![云凤蝶 - 数据接入](img/VisualConstruction2020_features.20-16-20.png)
+![云凤蝶 - 数据接入](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d25879617c5b4555bcf13153e42a693a~tplv-k3u1fbpfcp-watermark.image)
 
 ### 4.2 模块通信和状态共享
 
@@ -172,7 +176,7 @@
 
 这里举一个业界的例子，云凤蝶为每个页面都提供一个类似 MMVM 架构下的 Controller 角色的 View Model 文件，从而实现视图的状态驱动，其内容就是导出一个普通的 TypeScript Class，包含了**状态属性**和**状态方法**。
 
-![云凤蝶 - 状态Controller](img/VisualConstruction2020_features.22-30-38.png)
+![云凤蝶 - 状态Controller](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c819dbb9e5944c9f961b68cd48aa5f0c~tplv-k3u1fbpfcp-watermark.image)
 
 在页面 Controller 中定义好变量和方法之后，用户可以通过属性面板的交互操作：
 
@@ -181,7 +185,7 @@
 
 实现了数据的流通后，云凤蝶还为此做了针对更新视图响应式的优化，核心架构就是 Reactive （响应式）和 Observable （可观测），实现的原理就是 Vue3 也使用了的 **ES6 Proxy** 封装。优化之后，当数据发生变化，就不用全局刷新，只需要刷新依赖这个数据的组件即可。
 
-![云凤蝶 - 组件响应式状态管理](img/VisualConstruction2020_features.22-41-36.png)
+![云凤蝶 - 组件响应式状态管理](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7e908611604b471da11c89d23e640104~tplv-k3u1fbpfcp-watermark.image)
 
 ## 5. 画布（布局方案、栅格及参考线、边界控制）
 
@@ -200,37 +204,49 @@
 
 **自由式**完全可随意拖拽元素位置，自由度高，只需几个基础 UI 组件即可，存在层级概念，可任意叠放拼装，在无成品 UI 组件的情况下 diy 出复杂页面。但页面不可控，对操作人员的美感要求更高。更适合 UI 同学操作使用。下图只是一个复杂布局的例子，关注布局即可先不要管业务逻辑如何实现。
 
-#### 5.1.1
+### 5.2 & 5.3 画布的栅格、参考线、边界控制（待完成）
 
-#### 5.1.2
+## 6. 多端和多框架适配
 
-## 6. 多端适配
+1. iceluna - 多框架适配
 
-1. iceluna - 多端适配
-
-   ![iceluna - 多端适配](img/visualConstruction2020.01-07-23.png)
+   ![iceluna - 多端适配](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9bc2939fa7ee40c9b95b33dcc8906e37~tplv-k3u1fbpfcp-watermark.image)
 
 2. MPM - 多端适配
 
-   ![MPM - 多端适配](img/visualConstruction2020.01-28-49.png)
+   ![MPM - 多端适配](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ac64a9f98566426590a34a352c111318~tplv-k3u1fbpfcp-watermark.image)
 
 ## 7. 数据模型 Model / 数据约束 Schema
 
 数据模型和数据约束是可视化搭建非常核心的一部分，良好的模型和约束设计能帮助我们更好地实现可视化搭建。
 
-![京东 - MPM - PageData](img/visualConstruction2020.01-36-36.png)
+![京东 - MPM - PageData](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/548256e9a58240a49bb061ade785deca~tplv-k3u1fbpfcp-watermark.image)
 
-![京东 - MPM - ComData](img/visualConstruction2020.01-36-59.png)
+![京东 - MPM - ComData](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/36a8f52b2cb64d2480b9ac9adbeaff56~tplv-k3u1fbpfcp-watermark.image)
 
 ## 8. 海量部署
 
-这里引入一套阿里的淘积木完成的海量部署方案。
+这里展示一套阿里的淘积木产品，所设计并落地的海量部署方案。
 
-![阿里 - 淘积木 - 海量部署 - 问题](img/VisualConstruction2020_basic.16-26-33.png)
-![阿里 - 淘积木 - 海量部署 - 初步架构](img/VisualConstruction2020_basic.16-27-39.png)
-![阿里 - 淘积木 - 海量部署 - 小规模架构](img/VisualConstruction2020_basic.16-28-19.png)
-![阿里 - 淘积木 - 海量部署 - 海量部署架构](img/VisualConstruction2020_basic.16-28-52.png)
-![阿里 - 淘积木 - 海量部署 - 最终架构](img/VisualConstruction2020_basic.16-29-54.png)
+1. 核心问题
+
+   ![阿里 - 淘积木 - 海量部署 - 问题](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8b6ad795bcc64755bc3a03a4814f1f45~tplv-k3u1fbpfcp-watermark.image)
+
+2. 初步方案
+
+   ![阿里 - 淘积木 - 海量部署 - 初步方案](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/058db164980e4146afee167e51da08c5~tplv-k3u1fbpfcp-watermark.image)
+
+3. 小规模架构
+
+   ![阿里 - 淘积木 - 海量部署 - 小规模架构](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9ca86b0f4b4643d5aa5f82ea2e0a8917~tplv-k3u1fbpfcp-watermark.image)
+
+4. 模型建立和方案设计
+
+   ![阿里 - 淘积木 - 海量部署 - 架构完善](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/80559cca81ce475cb47e58a10ee82cb3~tplv-k3u1fbpfcp-watermark.image)
+
+5. 最终架构
+
+   ![阿里 - 淘积木 - 海量部署 - 最终架构](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0500b63217134ffb91279df3c4e9e000~tplv-k3u1fbpfcp-watermark.image)
 
 我们在实现海量部署中，可能会遇到的一些关键性问题：
 
@@ -242,11 +258,11 @@
 
 > 微前端：将前端整体分解为小而简单的块的模式。这些块可以独立持续开发、持续测试和持续部署，同时仍然聚合为一个产品出现在客户面前。
 
-下图是微前端的架构示意图。
+下图是常见的**微前端架构示意图**：
 
-![微前端架构示意图](img/VisualConstruction2020_features.22-39-38.png)
+![常见的微前端架构示意图](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/35874996de6146ea9ad8a4c9bdccd8d7~tplv-k3u1fbpfcp-watermark.image)
 
-微前端的思路其实特别契合可视化搭建的需要，因为对于组件而言，我们尽可能地不对上传组件者如何实现组件进行限制，因为有些人会习惯用 React、Vue 或者 Angular，有些人会写一些原生 js 的组件，这就要求我们在封装组件完成搭建的时候，提供一个可兼容各种组件的容器，和微前端的思路不谋而合。
+**微前端**的思路其实特别契合可视化搭建的需要，因为对于组件而言，我们尽可能地不对上传组件者如何实现组件进行限制，因为有些人会习惯用 React、Vue 或者 Angular，有些人会写一些原生 js 的组件，这就要求我们在封装组件完成搭建的时候，提供一个可兼容各种组件的容器，这和微前端的思路不谋而合。
 
 社区知名度较高的微前端解决方案是**single-spa**，飞冰在进行调研之后，结合自身的可视化搭建业务，提出了一种成熟的微前端方案**icestark**，应用在阿里创作者平台等项目上，大致的实现思路如下：
 
@@ -268,7 +284,7 @@
 
     如果不是用框架实现的，也可以用原生 js 封装一个`mountJsChildApp`函数实现挂载
 
-![飞冰 - icestark](img/VisualConstruction2020_features.22-46-32.png)
+![飞冰 - icestark - 微前端](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b855a0a00bbf4fbfb8de28a1045a2b9a~tplv-k3u1fbpfcp-watermark.image)
 
 ## 10. Serverless
 
@@ -282,33 +298,38 @@ Serverless 也是非常前沿的一个技术，但其实使用起来不会那么
 
 喔哦，原来是不用管服务器搭建了，而且还能负载均衡、按需运行，这还可以帮我们节省搭建的成本！
 
-那么，怎么用呢？亲，**SSR** 可以了解一下！我们只要在**云函数 SCF** 里实现对页面的 **Render** 就行啦！
+那么，怎么用呢？亲，**SSR** 可以了解一下！我们只要在**云函数 SCF** 里实现对页面的 **Render** 就行啦！具体如何实现大家应该可以通过搜索引擎找到对应的实现文章。
 
 > 此处可能需要云服务商提供临时域名用于访问站点
 
-![SSR](img/VisualConstruction2020_features.23-34-22.png)
+![SSR](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/94900d3768e04abb8e399ff0b6706e39~tplv-k3u1fbpfcp-watermark.image)
 
-## 11. AI（以 imgcook 为例）
+## 11. AI 的引入和结合
 
 > 目前 AI 从机器学习不断发展到了现在大热的深度学习（神经网络）， 未来 AI 到底能够发展得有多快谁也不知道，说不定我们就能在有生之年看到“奇点”的来临。
 
-主要利用 AI 的识别和推导能力（识别也是一种推导）来协助可视化搭建，业内比较典型和成熟的成果如 **imgcook**，下面是几张关于该产品的说明图。
+主要利用 AI 的识别和推导能力（识别也是一种推导）来协助可视化搭建，业内比较典型和成熟的成果如 **imgcook**，下面是几张关于该产品的说明图:
 
-![imgcook - core](img/VisualConstruction2020_features.00-50-46.png)
+1. 核心想法
 
-![imgcook - pipe](img/VisualConstruction2020_features.00-52-36.png)
+   ![imgcook - core](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/20c4b22e7ae74c7e9a01fd306931c9b4~tplv-k3u1fbpfcp-watermark.image)
 
-![imgcook - interface](img/VisualConstruction2020_features.00-54-25.png)
+2. 产品的大致架构
+
+   ![imgcook - pipe](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/04490bc8bd624abe943f7016a45dbbc0~tplv-k3u1fbpfcp-watermark.image)
+
+3. 用户的操作界面
+
+   ![imgcook - interface](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3bc198fc66d344848ee84290f4bfa67e~tplv-k3u1fbpfcp-watermark.image)
 
 ## 12. 其他的一些思考
 
 实现前端可视化搭建是一个耗时长久的浩大工程，期间可能还会遇到以下技术难点，由于篇幅有限暂时不一一深入研究，后续有机会可以持续补充和完善：
 
-1. 无限画布（允许用户在非常广阔的虚拟画布上进行创作）
+1. 无限画布（允许用户在非常广阔的虚拟画布上进行自由的创作，让设计师能够直接在平台上像在 sketch 上一样工作）
 2. 容灾系统（解决服务器宕机或者其他灾难发生时，保障用户数据的问题）
 3. 代码可用率（检验是 low-code 还是 no-code 的最佳标准）
-4. 多端多框架对接（涵盖大部分端，能够输出为各大框架下的代码）
-5. 多人协同（方便团队协作快速完成一个大型的复杂应用）
+4. 多人协同（方便团队协作快速完成一个大型的复杂应用）
 
 ## # 参考文章
 
