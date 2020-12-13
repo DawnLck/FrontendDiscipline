@@ -5,6 +5,9 @@ node_modules
 
 .vscode
 
+
+
 # 一些不会被公开的文章，如个人未脱敏的简历
 docs/Profiles/*.Pro.md
-Interview/my/**
+**/Interview/my/**
+Z-self
