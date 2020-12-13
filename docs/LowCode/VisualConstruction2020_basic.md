@@ -1,8 +1,13 @@
 # 【Dawnlck】2020 前端可视化搭建小报告- 01 - 背景调研
 
-> Gathered & writen by [Dawnlck 在掘金][author]
+> 本次小报告因为篇幅的考虑，分成了三块：01 背景调研 - 02 链路、架构和难点 - 03 业内成果陈列，此篇是第一部分，会从四个维度（What、Who、Why、How）来介绍前端可视化搭建。
 
-> 本次小报告因为篇幅的考虑，分成了三块：背景调研 - 架构和难点 - 业内成果陈列，此篇是第一部分，会从四个维度（What、Who、Why、How）来介绍前端可视化搭建。
+> 👨🏽‍💻 笔者两三句：
+> 我本人是因为最近有一个契机，想在可视化搭建这块深挖一下，做一份小报告。虽然我自己业务里没有做过这样的事，但不妨碍我站在一个研究者的角度，为大家整理一些资料。
+>
+> 这份报告前后大概总共花了两三天的时间，看完这三篇小报告，虽然不会让你立马能完成一个可视化搭建系统，但至少能让你能领略一下可视化搭建的进展和面貌。
+>
+> 可视化搭建涵盖的内容是非常多的，越是深入越能发现每一个细点都是一个相当的复杂的研究命题，笔者自己也在不断地完善这份小研究。
 
 ## 0. 一些前置的知识
 
@@ -18,21 +23,21 @@
 
 飞冰给出了一张更详细的关于粒度的参考图，其中的业务组件也可以称为 **widgets**和基础组件（**components**）相区分：
 
-![飞冰 - 粒度参考图](img/VisualConstruction2020_basic.22-25-11.png)
+![飞冰 - 粒度参考图](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/eb0f59be3244482b8147348f5a38337a~tplv-k3u1fbpfcp-watermark.image)
 
 前两者我们可以通过组件库和业务微件库，形成通用的代码片段仓库，而模板我们也可以借由 GUI（图形用户界面，也可称为可视化管理平台），管理我们在业务中遇到的常用模板。
 
-![不同粒度的代码块](img/visualConstruction2020.23-22-49.png)
+![不同粒度的代码块](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/050c7c0f450d4cc28c9ba67c26ad9bb5~tplv-k3u1fbpfcp-watermark.image)
 
 模板搭建平台中，**Ant Design Landing** 应该是比较典型且有知名度的解决方案。
 
 它是一个面向产品首页的快速搭建解决方案，包含了丰富的模板和模板里对应的模块，同时提供了一个在线的编辑器。
 
-![Ant Design Landing](img/VisualConstruction2020_basic.15-51-50.png)
+![Ant Design Landing](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d2c9d9adb7624f39833bcdac0fd787f4~tplv-k3u1fbpfcp-watermark.image)
 
 这里还有一张个人觉得很不错的由**政采云团队**完成的模板可视化管理平台的截图，如下
 
-![模板可视化管理平台](img/visualConstruction2020.22-51-10.png)
+![政采云 - 模板可视化管理平台](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7349affaa14948a1a44a6043245d2869~tplv-k3u1fbpfcp-watermark.image)
 
 ## 1. What 可视化搭建是什么？
 
@@ -42,11 +47,11 @@
 
 **可视化搭建** 是高效利用组件的前端上层建筑，作为一个庞大的可视化前端应用, 它建立在大量的前端基建（如代码规范、脚手架、组件库、框架等）之上。
 
-![可视化搭建管道图](img/VisualConstruction2020_basic.00-16-50.png)
+![云凤蝶 - 可视化搭建管道图](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/eff7f014e3b94b349a5ee3725871dfd1~tplv-k3u1fbpfcp-watermark.image)
 
 下图描述了可视化搭建在技术开发层面的具体位置，也可以作为可视化搭建的架构示例。
 
-![前端工程架构层次图](img/visualConstruction2020.22-43-53.png)
+![政采云 - 可视化搭建所处的位置](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2ec33b69b1534929b7165ebacaac363a~tplv-k3u1fbpfcp-watermark.image)
 
 ## 2. Who 可视化搭建面向谁？
 
@@ -57,7 +62,7 @@
 
 虽然最终的目标是实现所有页面的零代码化，但是对于技术逻辑和业务逻辑比较复杂的场景，还是需要做一些定制的。
 
-![前端搞搭建 - 面向谁？](img/VisualConstruction2020_basic.16-38-18.png)
+![iceluna - 可视化搭建面向谁？](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1cb23df22b494ed7bacb27199963592b~tplv-k3u1fbpfcp-watermark.image)
 
 ## 3. Why 为什么做可视化搭建？
 
@@ -69,7 +74,7 @@
 
 对于传统开发者而言，在实际的业务开发过程中，既要关注业务复杂度，又要关注技术复杂度，而低代码平台（可视化搭建）就是为了尽可能地屏蔽掉技术细节，转移出大部分的技术复杂度，从而减轻业务线开发的负担。
 
-![阿里云原生 - 低代码化平台的定位](img/VisualConstruction2020_basic.19-18-01.png)
+![阿里云原生 - 低代码化平台的定位](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ee741b063b2d461bacbfa1148e666876~tplv-k3u1fbpfcp-watermark.image)
 
 总结一下前端可视化搭建要实现的目标：
 
@@ -82,7 +87,7 @@
 
 当然可视化搭建的未来远不止于此，比如**Serverless**、**DevOps 全链路的打通**、**结合 AI 的应用**等。
 
-![为什么会选择不使用lowcode](img/VisualConstruction2020_basic.19-52-27.png)
+![为什么会选择不使用lowcode](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/36e0ba6392d54fb38710f347e2c97004~tplv-k3u1fbpfcp-watermark.image)
 
 除此之外，还有一些针对用户的“为什么”的问题需要讨论：如果开发或者非开发不想用低代码平台，是会因为什么？
 
@@ -102,25 +107,23 @@
 
 **基础思路:** 先调用一个模板作为基础骨架，然后通过控制组件的属性，通过少量的代码调整，使得大致的页面效果能够与业务高保真图保持一致，最后接入数据接口，进入构建、测试和发布流程。
 
-我们也可以从可视化搭建解决的痛点，或者说具有的能力维度，来分析这件事情。
-
-![可视化搭建的能力维度](img/visualConstruction2020.23-51-46.png)。
-
-阿里云原生技术团队列出了低代码平台的三个核心能力：
+阿里云原生技术团队列出了低代码平台需要实现的三个核心能力：
 
 ![低代码平台的三个核心能力](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7e0ffe73c5024b869a5c205a88310dfb~tplv-k3u1fbpfcp-zoom-1.image?imageslim)
 
 为了达成这样的能力维度或者实现这样的核心能力，其实需要很多层面的支撑，如**工具链**、**物料平台**、**工程套件**、**接口编排**等，下面展示了一张阿里妈妈的产品家族，大家可以略窥一二。
 
-![阿里妈妈的产品大家族](img/VisualConstruction2020_basic.16-14-01.png)
+![阿里妈妈 - 产品家族](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/cd271c5cd89b4456b1c2a48af13a650a~tplv-k3u1fbpfcp-watermark.image)
 
-关于架构层和一些实现的难点，移至下文中展开介绍。
+关于具体的架构层和一些可视化搭建领域的技术难点，移至第二篇研究报告中展开介绍。
+
+如果你不想考虑那么多架构层的问题，只想快速地完成一个可视化搭建的雏形，[松果出行工程师的这篇技术文章][songguo]应该能帮到你
 
 ## # 参考文章
 
-这里很多资料，来源于本人参与的早早聊大会的讲师 PPT 材料，在这其中我也做了一些筛选和整合，加入了自己制作的图表，也欢迎各位关注这个干货满满的会议。
+这里很多资料，来源于本人参与的早早聊大会的讲师 PPT 材料，在这其中我做了一些筛选和整合，加入了自己的分析和制作的图表，也欢迎各位关注这个干货满满的会议。
 
-再列举一些其他参考的文章或者网站：
+再列举一些其他参考的公开文章或者网站：
 
 1. [《前端工程实践之可视化搭建系统（一）》][doc_01]
 2. [《MPM 卖场可视化搭建系统 — 要素设计》][doc_02]
@@ -138,3 +141,4 @@
 [wiki-lowcode]: https://zh.wikipedia.org/zh-cn/%E4%BD%8E%E7%A8%8B%E5%BC%8F%E7%A2%BC%E9%96%8B%E7%99%BC%E5%B9%B3%E5%8F%B0
 [alloyteam]: http://www.alloyteam.com/2019/07/h5-build-tool-pipeline/
 [feibing]: https://juejin.cn/post/6844903744652443661
+[songguo]: https://juejin.cn/post/6889320306800852999
