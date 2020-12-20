@@ -6,10 +6,10 @@
   "directories": {
     "doc": "docs"
   },
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "docsify-cli": "^4.4.2"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "docs": "npx docsify serve ./docs"
