@@ -14,11 +14,13 @@
 
 - 解决方案收录
 
-  - [SPA 型页面 SEO 优化](Resolution/SPA&SEO.md "SPA 型页面 SEO 优化指南")
+  - [SPA 型页面 SEO 优化](Resolution/SPA&SEO.md 'SPA 型页面 SEO 优化指南')
 
 作者: [⇲ Dawnlck 在掘金][juejin]
 
 链接：🔗https://dawnlck.github.io/FrontendDiscipline
+
+[banner](./_workspace/banner/banner.html ':include :type=iframe width=100% height=178')
 
 [juejin]: https://juejin.cn/user/1028798614345032
 

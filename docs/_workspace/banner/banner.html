@@ -1,0 +1,58 @@
+<div class="banner">
+  <div><img src="./bilibili-autumn-1.png" /></div>
+  <div><img src="./bilibili-autumn-2.png" /></div>
+  <div><img src="./bilibili-autumn-3.png" /></div>
+  <div><img src="./bilibili-autumn-4.png" /></div>
+  <div><img src="./bilibili-autumn-5.png" /></div>
+  <div><img src="./bilibili-autumn-6.png" /></div>
+</div>
+<style>
+  .banner {
+    height: 160px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .banner > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    --offset: 0px;
+    --blur: 2px;
+  }
+
+  .banner > div > img {
+    display: block;
+    width: 110%;
+    height: 100%;
+    object-fit: cover;
+
+    transform: translatex(var(--offset));
+    filter: blur(var(--blur));
+  }
+</style>
+
+<script>
+  const images = document.querySelectorAll(".banner > div > img");
+
+  document.querySelector(".banner").addEventListener("mousemove", (e) => {
+    let percentage = e.clientX / window.outerWidth;
+    let offset = 10 * percentage;
+    let blur = 20;
+
+    for (let [index, image] of images.entries()) {
+      offset *= 1.3;
+
+      let blurValue = Math.pow(index / images.length - percentage, 2) * blur;
+
+      image.style.setProperty("--offset", `${offset}px`);
+      image.style.setProperty("--blur", `${blurValue}px`);
+    }
+  });
+</script>
