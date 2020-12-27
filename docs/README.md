@@ -20,8 +20,6 @@
 
 链接：🔗https://dawnlck.github.io/FrontendDiscipline
 
-[banner](./_workspace/banner/banner.html ':include :type=iframe width=100% height=178')
-
 [juejin]: https://juejin.cn/user/1028798614345032
 
 <!-- [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=dawnlck&layout=compact)](https://github.com/anuraghazra/github-readme-stats) -->
