@@ -5,7 +5,10 @@
 <div id="services" class="tech-stack">
     <ul class="tech-list">
         <li class="tech-card" v-for="item in services">
-            <img :src="item.src" />
+            <a :href="item.link" target="__blank">
+                <img :src="item.src" />
+                <span v-if="item.name" v-text="item.name"></span>
+            </a>
         </li>
     </ul>
 </div>
@@ -14,7 +17,8 @@
     const services = [
         {
             name: "rxjs",
-            src: "https://cn.rx.js.org/manual/asset/Rx_Logo_M.png"
+            src: "https://cn.rx.js.org/manual/asset/Rx_Logo_M.png",
+            link: "https://cn.rx.js.org/"
         }
     ]
 
