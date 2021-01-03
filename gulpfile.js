@@ -2,9 +2,11 @@
  * Gulpfile.js
  */
 
-const { src, series, dest, watch } = require("gulp");
+const { src, parallel, dest, watch } = require("gulp");
 const terser = require("gulp-terser");
 const rename = require("gulp-rename");
+const less = require("gulp-less");
+const cleanCSS = require("gulp-clean-css");
 
 function terserDocConfigJS() {
   return src("./docs/pre.config.js")
@@ -13,9 +15,22 @@ function terserDocConfigJS() {
     .pipe(dest("./docs/dist"));
 }
 
-function watchDocConfig() {
-  watch("./docs/pre.config.js", terserDocConfigJS);
+function compileDocLess() {
+  return src("./docs/index.less")
+    .pipe(less())
+    .pipe(cleanCSS())
+    .pipe(rename("index.min.css"))
+    .pipe(dest("./docs/dist"));
 }
 
-exports.buildDocConfig = terserDocConfigJS;
-exports.watchDocConfig = watchDocConfig;
+function watchDocConfig() {
+  watch("./docs/pre.config.js", terserDocConfigJS);
+  watch("./docs/styles/*.less", compileDocLess);
+}
+
+exports.build = parallel(terserDocConfigJS, compileDocLess);
+exports.watch = watchDocConfig;
+exports.js = terserDocConfigJS;
+exports.less = compileDocLess;
+
+exports.default = watchDocConfig;

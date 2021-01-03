@@ -91,10 +91,9 @@ const TechListData = {
 const DevToolsData = {
   sys: [
     {
-      name: 'rxjs',
-      title: true,
-      src: 'https://cn.rx.js.org/manual/asset/Rx_Logo_M.png',
-      link: 'https://cn.rx.js.org/',
+      name: 'SwitchHost',
+      src: 'https://oldj.github.io/SwitchHosts/images/logo_with_title.png',
+      link: 'https://oldj.github.io/SwitchHosts/',
     },
   ],
 };

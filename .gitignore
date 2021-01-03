@@ -1,13 +1,15 @@
+# Basic 基础的一些配置
 
 \.idea/
-
 node_modules
-
 .vscode
 
+# Zip 压缩文件
 
+*.zip
+*.rar
 
-# 一些不会被公开的文章，如个人未脱敏的简历
+# Internal 一些不会被公开的文章，如个人未脱敏的简历
 docs/Profiles/*.Pro.md
 **/Interview/my/**
 Z-self

@@ -4,7 +4,7 @@
 
 [![Github stats](https://github-readme-stats.vercel.app/api?username=dawnlck&show_icons=true)](https://github.com/anuraghazra/github-readme-stats)
 
-这里存放着一些作者 **写的文章** 和 **记的笔记**，部分文章会和[掘金社区][juejin]这边保持同步。
+这里存放着一些作者 **写的文章** 和 **记的笔记**，部分文章会和 [掘金社区][juejin] 这边保持同步。
 
 - 可视化搭建 2020
 
