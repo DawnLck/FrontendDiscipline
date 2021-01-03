@@ -8,11 +8,16 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "docsify-cli": "^4.4.2"
+    "docsify-cli": "^4.0.2",
+    "gulp": "^4.0.2",
+    "gulp-rename": "^2.0.0",
+    "gulp-terser": "^2.0.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "docs": "npx docsify serve ./docs"
+    "docs": "npx docsify serve ./docs",
+    "watch": "gulp watchDocConfig",
+    "build": "gulp buildDocConfig"
   },
   "repository": {
     "type": "git",
