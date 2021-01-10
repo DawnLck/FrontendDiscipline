@@ -20,7 +20,7 @@
 
 ![数字孪生 - 论文](img/DataVisulize.02.22-38-57.png)
 
-这边也找到了一篇比较新的 2018 年的综述论文，感兴趣的可以在最下方的参考链接中查看，其中提及到了数据建模、数据融合等技术。
+这边也找到了一篇比较新的 [2018 年的综述论文][ieee_0]，其中提及到了数据建模、数据融合等技术。
 
 那么数字孪生的具体链路是什么呢？我将其大致地分为了四个部分：数据采集、数据融合、数据建模和交互映射。
 
@@ -69,11 +69,13 @@ G6 完成的大多数可视化成果，都是在二维平面上，利用 Canvas 
 
 以前我自己也有类似的一些想法，但是距离做出来还有很远很远的距离，现在看到这种完善的三维拓扑图可视化效果，备受冲击 Orz。因为是三维的图可视化视图，所以以前很多在平面上遇到的大规模图可视化分析难点，比如视图混乱、关系密杂、海量节点数等问题，在这里都有了相对的解决方案。
 
-![Exploer - graph](img/DataVisulize.02.13-49-15.png)
+![Explore - graph](img/DataVisulize.02.13-49-15.png)
 
 点的权重通过不同的图形和体积加以区分，同时还能够呈现出在视图中，点和点之间的层次关系，而大量的叶子节点也被隐含在主体节点圈的下方，显得整个视图非常干净通透。
 
-![Exploer - more](img/DataVisulize.02.13-54-41.png)
+<!-- ![Exploer - more](img/DataVisulize.02.13-54-41.png) -->
+
+![Explore - more](img/DataVisulize.02.23-12-36.png)
 
 在图的布局上面，该团队延展出三维的“视角”，各个视觉所要呈现出的数据含义各不相同，这一块我也相信会有更大的探索空间。
 
@@ -93,14 +95,7 @@ G6 完成的大多数可视化成果，都是在二维平面上，利用 Canvas 
 
 第二张图展示了 G6 团队，目前理想的图可视化能力大图。
 
-相信大家也看到了 2020 年 11 月， [G6 Graphin 首页][antv_g6_graphin]的 **图可视分析解决方案白皮书**，还没有看的赶紧下载下来瞧一瞧吧。这份白皮书包含了六个部分:
-
-1. AntV 图可视化解决方案
-2. 图可视化解决方案 - 云安全
-3. 图可视化解决方案 - 知识图谱
-4. 图可视化解决方案 - 企业风控
-5. 图可视化解决方案 - 图数据库
-6. 图可视化解决方案 - 性能优化
+相信大家也看到了 2020 年 11 月， [G6 Graphin 首页][antv_g6_graphin]的 **图可视分析解决方案白皮书**，还没有看的赶紧下载下来瞧一瞧吧。这份白皮书包含了六个部分，如下图所示:
 
 ![图可视分析解决方案白皮书](img/DataVisulize.02.23-30-28.png)
 
@@ -132,6 +127,26 @@ G6 在去年的组件设计里，新增了一个时序组件：[TimeBar](https:/
 
 ## 5. 单元数据可视化
 
+数据的每一项被我们称为数据单元(DataUnit)或者数据项(DataItem)。
+
+`identity(id)`是数据单元的唯一标识，为每一个数据单元维护该属性可能会导致大型数据集的`视觉混乱`。
+
+为了解决这个问题，许多可视化技术都是基于数据抽象的，比如**聚合**、**分割**或**过滤**。这些抽象的或聚合的可视化技术没有在数据项和可视标记之间保持绝对的一对一映射，而是将多个数据项合并到不再可以分离的可视聚合中，并且标识属性因此不存在，聚合可视化的示例有条形图、柱状图和直方图。
+
+单元可视化的优势:
+
+1. 感知：维护标识，允许用户在动画转换和交互期间跟踪数据单元
+2. 物理：提供了物理转化和构建视图的独特方式
+3. 交互：用户可以获得每个单独的数据项的详细信息，同时也支持一些过滤操作
+
+单元可视化的弱点：
+
+1. 计算可伸缩性：内存、计算和渲染性能会是限制因素
+2. 显示可伸缩性：只有能够区分数据单元的视图，单元可视化才有价值，所有对显示屏幕的像素数或者分辨率也有要求
+3. 感知可伸缩性（视觉杂波）： 极少量的数据集并不适用于单元可视化，用聚合可视化（如堆叠条形图）可能效果更好
+
+在单元可视化中，同样涉及到可视化语法的概念，这种基于语法的可视化方法的抽象，使人们对图形的思考、推理和交流更加容易。关于图形语法，可以参考这篇微软和蚂蚁都推荐的起源文：Wilkinson's 《The Grammar of Graphics》
+
 ### 5.1 微软 - SandDance
 
 SandDance 是微软研究院于 2016 年推出的数据可视化免费 Web 应用，由微软研究院的可视化和交互式数据分析（VIDA）小组创建，该小组专注于以人为中心的数据处理方法，探索数据可视化、沉浸式分析和对机器学习模型的理解等领域。
@@ -151,17 +166,43 @@ SandDance 是微软研究院于 2016 年推出的数据可视化免费 Web 应�
    - MSR-TR-2015-65 | August 2015
    - Articles & videos
 
-## 6. 主题待定（Story Telling?）
+## 6. 图表制作工具
 
-## 7. 数据的视图切换
+### 6.1 AntV - ChartCube 图表魔方
 
-> 待补充
+![AntV - ChartCube](img/DataVisulize.02.00-52-53.png)
 
-AntV - AVA
+## 7. 主题待定（Story Telling?）
 
-## 8. 机器学习、人工智能的应用
+## 8. AI 辅助可视化
 
-> 待补充
+### 8.1 自动可视化框架（图表参谋 / 图表智能化推荐） - AntV - AVA
+
+> AVA 是为了更简便的可视分析而生的技术框架。 VA 代表可视分析（Visual Analytics），而第一个 A 具有多重涵义：其目标是成为一个自动化（Automated）、智能驱动（AI driven）、支持增强分析（Augmented）的可视分析解决方案。
+
+> 只需要准备一个有效的数据集，写一个 API 调用，剩下的一切调整都能通过可视化 UI 去完成。
+
+下图展示了 AVA 的设计思路
+
+![AntV - AVA](img/DataVisulize.02.00-19-28.png)
+
+AVA 的关键能力，就是**推荐规则**，从一个核心，衍生出了`智能图表`、`一键图标优化`、`图表大词典`等功能。
+
+（笔者一开始真的以为是通过标注好的样本训练集，训练多层神经网络分类器，训练好后输入真实数据 RealDataset，通过分类器得到匹配度，这样就能选择最适合的图表类型，结果发现 AVA 的推荐器实现思路是维护知识图谱和规则表...）
+
+![AntV - 推荐规则](img/DataVisulize.02.00-55-07.png)
+
+![AntV - 推荐规则 - 2](img/DataVisulize.02.00-56-15.png)
+
+![AntV - 推荐规则 - advisor](img/DataVisulize.02.01-04-12.png)
+
+下面展示了两组 demo，一组是 AVA 的**智能推荐**列表，另一组是 AVA 的**智能图表生成**。
+
+![AntV - AVA](img/DataVisulize.02.00-05-39.png)
+
+![AntV - AVA - Demo](img/avademo.gif)
+
+### 8.2 设计稿生成可视化 - DataV - D2C
 
 人工智能如何辅助数据可视化搭建
 
@@ -174,6 +215,8 @@ DataV 团队 - D2C - 基于机器视觉来识别设计稿
 > 待补充
 
 如何快速搭建一个 BI 可视化分析决策页面...
+
+DeepInsight / Tableau
 
 ## 参考文章
 
@@ -193,6 +236,16 @@ DataV 团队 - D2C - 基于机器视觉来识别设计稿
 
 [《G6 - Components - Timebar》][g6_timebar]
 
+[《AntV - 2020 - Ant Design 4.0 来了！第三届 SEE Conf 都讲了什么？》][seeconf3]
+
+[《AntV - AVA - 2020 - 欢迎进入 2020 数据可视化智能研发时代》][ava2020]
+
+[《AntV - AVA - 2020 - AVA 1.0 你的图表参谋》][ava202001]
+
+[《AntV - AVA - 2020 - PPT - 可视化智能研发流程 AVA》][avappt]
+
+[Tableau - 为什么选择 tableau][tableau]
+
 [zhihu_dig_mirror]: https://zhuanlan.zhihu.com/p/125733253
 [ieee_0]: https://ieeexplore.ieee.org/abstract/document/8477101/authors#authors
 [wiki_dt]: https://zh.wikipedia.org/wiki/%E6%95%B0%E5%AD%97%E6%98%A0%E5%B0%84
@@ -201,3 +254,8 @@ DataV 团队 - D2C - 基于机器视觉来识别设计稿
 [shiwu_graph]: https://zhuanlan.zhihu.com/p/83685690
 [zhanku_graph]: https://www.zcool.com.cn/work/ZMzg4OTQ5ODQ=.html
 [g6_timebar]: https://g6.antv.vision/zh/docs/design/component/timebar#%E6%9E%84%E6%88%90%E5%85%83%E7%B4%A0
+[seeconf3]: https://juejin.cn/post/6844904038698319879
+[ava2020]: https://www.yuque.com/antv/blog/ygdubv
+[ava202001]: https://www.yuque.com/antv/blog/2020ava
+[avappt]: https://tool.lu/ja_JP/deck/jI/detail?slide=35
+[tableau]: https://www.tableau.com/zh-cn/why-tableau/what-is-tableau#video
