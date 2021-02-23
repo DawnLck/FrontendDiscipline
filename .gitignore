@@ -13,3 +13,6 @@ node_modules
 docs/Profiles/*.Pro.md
 **/Interview/my/**
 Z-self
+
+**/参考资料/**
+**/reference
